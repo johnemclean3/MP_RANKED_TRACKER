@@ -37,7 +37,7 @@ const RANKS = [
 // 9:00 AM PT on March 12, 2026
 // PT is UTC-7 on this date → 16:00 UTC
 // =======================
-const TARGET_DATE_UTC = Date.UTC(2026, 3, 2, 16, 0, 0);
+const TARGET_DATE_UTC = Date.UTC(2026, 2, 26, 16, 0, 0);
 // month is 0-based → 3 = April
 
 // =======================
@@ -203,7 +203,7 @@ function startCountdown() {
     }
 
     const next = getNextRank(currentSR);
-    const remainingSR = 10000 - currentSR;
+    const remainingSR = 5400 - currentSR;
 
     if (remainingSR <= 0) {
       el.srPerDayText.textContent =
@@ -214,7 +214,7 @@ function startCountdown() {
     const srPerDay = Math.ceil(remainingSR / totalDays);
 
     el.srPerDayText.innerHTML =
-      `SR needed per day to reach Iridescent: <span class="sr-number">${srPerDay}</span>`;
+      `SR needed per day to reach Diamond: <span class="sr-number">${srPerDay}</span>`;
   };
 
   tick();
